@@ -1,3 +1,4 @@
+#' @importFrom utils download.file
 get_if_not_exists <- function(url, destfile){
   if(!file.exists(destfile)){
     download.file(url, destfile)

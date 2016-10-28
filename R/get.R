@@ -4,6 +4,7 @@
 #' @param level integer data level
 #' @export
 #' @import rappdirs
+#' @importFrom utils unzip
 #' @encoding UTF-8
 #' @references Lehner, B., Döll, P.: Development and validation of a global
 #'database of lakes, reservoirs and wetlands, Journal of Hydrology, Volume

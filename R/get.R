@@ -29,4 +29,6 @@ glwd_get <- function(level){
   dest_path <- paste0(dest_dir, "/", file_base)
 
   get_if_not_exists(url, dest_path)
+  unzip(dest_path, exdir = dest_dir)
+  unlink(dest_path)
 }

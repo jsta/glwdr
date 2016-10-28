@@ -36,11 +36,13 @@ dt <- suppressMessages(glwd_load(level = 1))
 library(maps)
 library(sp)
 
-dt <- dt[dt$COUNTRY == "United States" & dt$LAT_DEG < 56,] 
+dt <- dt[dt$COUNTRY == "United States" &
+         dt$LAT_DEG < 56 &
+         dt$AREA_SKM < 30000,] 
  
 map("state")
-
 plot(dt, add = TRUE, col = "blue")
+axis(1); axis(2)
 ```
 
 ```{r }

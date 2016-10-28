@@ -12,33 +12,42 @@ output: github_document
 devtools::install_github("jsta/glwdr")
 ```
 
+### Load Package
+```{r }
+library(glwdr)
+```
+
 ## Usage
 
 ### Level 1
 ```{r eval=FALSE} 
-library(glwdr)
-
 glwd_get(level = 1)
 
 dt <- glwd_load(level = 1)
-
-dt@data[1:5,]
 ```
 
-```{r echo=FALSE} 
+```{r echo=FALSE,message=FALSE,results='hide'} 
 library(glwdr)
 
-dt <- invisible(glwd_load(level = 1))
+dt <- suppressMessages(glwd_load(level = 1))
+```
 
+```{r }
+library(maps)
+library(sp)
+
+dt <- dt[dt$COUNTRY == "United States" & dt$LAT_DEG < 56,] 
+ 
+map("state")
+
+plot(dt, add = TRUE, col = "blue")
+```
+
+```{r }
 dt@data[1:5,]
 ```
 
-
-
-
 ## References
-
-http://wp.geog.mcgill.ca/hydrolab/glwd/
 
 Lehner, B., Döll, P.: Development and validation of a global
 database of lakes, reservoirs and wetlands, Journal of Hydrology, Volume

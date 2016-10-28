@@ -30,5 +30,5 @@ glwd_get <- function(level){
 
   get_if_not_exists(url, dest_path)
   unzip(dest_path, exdir = dest_dir)
-  unlink(dest_path)
+  # unlink(dest_path)
 }

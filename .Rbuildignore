@@ -2,3 +2,5 @@ README_files/
 READM.Rmd
 README.Rmd
 glwdr.Rproj
+^.*\.Rproj$
+^\.Rproj\.user$

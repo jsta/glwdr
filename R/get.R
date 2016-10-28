@@ -16,10 +16,17 @@ glwd_get <- function(level){
   baseurl <- "http://assets.worldwildlife.org/publications/"
 
   files <- c(
-  "16/files/original/GLWD-level1.zip?1343838522",
-  "17/files/original/GLWD-level2.zip?1343838637",
-  "18/files/original/GLWD-level3.zip?1343838716"
+  "16/files/original/GLWD-level1.zip",
+  "17/files/original/GLWD-level2.zip",
+  "18/files/original/GLWD-level3.zip"
   )
 
-  paste0(baseurl, files[level])
+  url <- paste0(baseurl, files[level])
+
+  dest_dir <- rappdirs::user_data_dir("glwdr")
+  dir.create(dest_dir, showWarnings = FALSE)
+  file_base <- strsplit(url, "/")[[1]][length(strsplit(url, "/")[[1]])]
+  dest_path <- paste0(dest_dir, "/", file_base)
+
+  get_if_not_exists(url, dest_path)
 }

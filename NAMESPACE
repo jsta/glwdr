@@ -2,7 +2,7 @@
 
 export(glwd_get)
 export(glwd_load)
-import(rappdirs)
+importFrom(rappdirs,user_data_dir)
 importFrom(rgdal,readOGR)
 importFrom(sp,CRS)
 importFrom(sp,Polygon)

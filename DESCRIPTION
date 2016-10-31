@@ -6,6 +6,8 @@ Description: R client for the Global Lakes and Wetlands Database.
 Depends:
     R (>= 3.2.3)
 Encoding: UTF-8
+URL: http://github.com/jsta/glwdr
+BugReports: http://github.com/jsta/glwdr/issues
 Imports: rappdirs, rgdal, sp
 LazyData: true
 RoxygenNote: 5.0.1

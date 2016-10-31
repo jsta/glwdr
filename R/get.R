@@ -3,7 +3,7 @@
 #'
 #' @param level integer data level
 #' @export
-#' @import rappdirs
+#' @importFrom rappdirs user_data_dir
 #' @importFrom utils unzip
 #' @encoding UTF-8
 #' @references Lehner, B., Döll, P.: Development and validation of a global

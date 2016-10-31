@@ -1,13 +1,12 @@
 Package: glwdr
-Title: What the Package Does (one line, title case)
+Title: Global Lakes and Wetlands Database
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Authors@R: person("Joseph", "Stachelek", email = "stachel2@msu.edu", role = c("aut", "cre"))
+Description: R client for the Global Lakes and Wetlands Database.
 Depends:
     R (>= 3.2.3)
-License: What license is it under?
 Encoding: UTF-8
-Imports: rappdirs, rgdal
+Imports: rappdirs, rgdal, sp
 LazyData: true
 RoxygenNote: 5.0.1
 Suggests: testthat

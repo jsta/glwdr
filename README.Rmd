@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# R client for the Global Lakes and Wetlands Database (GLWD)
+# Global Lakes and Wetlands Database (GLWD) R client 
 
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 
@@ -47,9 +47,40 @@ plot(dt, add = TRUE, col = "blue")
 axis(1); axis(2)
 ```
 
-```{r }
+```{r echo=FALSE, eval=FALSE}
 dt@data[1:5,]
 ```
+
+### Level 2
+
+```{r eval=FALSE} 
+glwd_get(level = 2)
+
+dt <- glwd_load(level = 2)
+```
+
+```{r echo=FALSE,message=FALSE,results='hide'} 
+library(glwdr)
+
+dt <- suppressMessages(glwd_load(level = 2))
+```
+
+```{r }
+library(maps)
+library(sp)
+library(ggplot2)
+library(raster)
+
+states <- map_data("state")
+
+states <- glwdr:::map_data_to_spdf(states)
+projection(dt) <- projection(states)
+
+map("state")
+plot(dt[states,], add = TRUE, border = "blue")
+axis(1); axis(2)
+```
+
 
 ## References
 

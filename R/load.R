@@ -15,6 +15,12 @@ glwd_load <- function(level){
     rgdal::readOGR(path, "glwd_1")
   }
 
+  glwd_load_level_2 <- function(){
+    dest_dir <- rappdirs::user_data_dir("glwdr")
+    path <- paste0(dest_dir, "/", "glwd_2.shp")
+    rgdal::readOGR(path, "glwd_2")
+  }
+
   if(!(level %in% c(1, 2, 3))){
     stop("Level must be either 1, 2, or 3!")
   }
@@ -24,7 +30,7 @@ glwd_load <- function(level){
   }
 
   if(level == 2){
-    res <- glwd_load_level_1()
+    res <- glwd_load_level_2()
   }
 
   if(level == 3){

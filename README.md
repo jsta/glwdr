@@ -71,16 +71,9 @@ axis(1); axis(2)
 
 ``` r
 glwd_get(level = 3)
-```
 
-    ## A local copy of http://assets.worldwildlife.org/publications/18/files/original/GLWD-level3.zip already exists on disk
-
-``` r
 dt <- glwd_load(level = 3)
-names(dt)
 ```
-
-    ## [1] "w001001"
 
 ``` r
 map("world")

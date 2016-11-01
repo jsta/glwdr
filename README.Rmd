@@ -80,11 +80,10 @@ axis(1); axis(2)
 
 ### Level 3
 
-```{r }
+```{r eval=FALSE}
 glwd_get(level = 3)
 
 dt <- glwd_load(level = 3)
-names(dt)
 ```
 
 ```{r echo=FALSE,message=FALSE,results='hide'} 

@@ -2,6 +2,7 @@
 #'
 #' @param level integer data level
 #' @importFrom rgdal readOGR
+#' @importFrom raster raster
 #'
 #' @export
 #'
@@ -11,14 +12,21 @@ glwd_load <- function(level){
 
   glwd_load_level_1 <- function(){
     dest_dir <- rappdirs::user_data_dir("glwdr")
-    path <- paste0(dest_dir, "/", "glwd_1.shp")
+    path <- paste0(dest_dir, .Platform$file.sep, "glwd_1.shp")
     rgdal::readOGR(path, "glwd_1")
   }
 
   glwd_load_level_2 <- function(){
     dest_dir <- rappdirs::user_data_dir("glwdr")
-    path <- paste0(dest_dir, "/", "glwd_2.shp")
+    path <- paste0(dest_dir, .Platform$file.sep, "glwd_2.shp")
     rgdal::readOGR(path, "glwd_2")
+  }
+
+  glwd_load_level_3 <- function(){
+    dest_dir <- rappdirs::user_data_dir("glwdr")
+    path <- paste0(dest_dir, .Platform$file.sep, "glwd_3", .Platform$file.sep,
+              "w001001.adf")
+    raster::raster(path)
   }
 
   if(!(level %in% c(1, 2, 3))){
@@ -34,7 +42,7 @@ glwd_load <- function(level){
   }
 
   if(level == 3){
-    res <- glwd_load_level_1()
+    res <- glwd_load_level_3()
   }
   res
 }

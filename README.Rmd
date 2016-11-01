@@ -66,13 +66,10 @@ dt <- suppressMessages(glwd_load(level = 2))
 ```
 
 ```{r }
-library(maps)
-library(sp)
 library(ggplot2)
 library(raster)
 
 states <- map_data("state")
-
 states <- glwdr:::map_data_to_spdf(states)
 projection(dt) <- projection(states)
 
@@ -81,6 +78,26 @@ plot(dt[states,], add = TRUE, border = "blue")
 axis(1); axis(2)
 ```
 
+### Level 3
+
+```{r }
+glwd_get(level = 3)
+
+dt <- glwd_load(level = 3)
+names(dt)
+```
+
+```{r echo=FALSE,message=FALSE,results='hide'} 
+library(glwdr)
+
+dt <- suppressMessages(glwd_load(level = 3))
+```
+
+```{r }
+map("world")
+plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
+axis(1); axis(2)
+```
 
 ## References
 

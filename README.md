@@ -53,13 +53,10 @@ dt <- glwd_load(level = 2)
 ```
 
 ``` r
-library(maps)
-library(sp)
 library(ggplot2)
 library(raster)
 
 states <- map_data("state")
-
 states <- glwdr:::map_data_to_spdf(states)
 projection(dt) <- projection(states)
 
@@ -69,6 +66,29 @@ axis(1); axis(2)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
+### Level 3
+
+``` r
+glwd_get(level = 3)
+```
+
+    ## A local copy of http://assets.worldwildlife.org/publications/18/files/original/GLWD-level3.zip already exists on disk
+
+``` r
+dt <- glwd_load(level = 3)
+names(dt)
+```
+
+    ## [1] "w001001"
+
+``` r
+map("world")
+plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
+axis(1); axis(2)
+```
+
+![](README_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 References
 ----------

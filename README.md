@@ -42,7 +42,7 @@ plot(dt, add = TRUE, col = "blue")
 axis(1); axis(2)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![](img/level-1-1.png)
 
 ### Level 2
 
@@ -65,7 +65,7 @@ plot(dt[states,], add = TRUE, border = "blue")
 axis(1); axis(2)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![](img/level-2-1.png)
 
 ### Level 3
 
@@ -81,7 +81,7 @@ plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
 axis(1); axis(2)
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![](img/level-3-1.png)
 
 References
 ----------

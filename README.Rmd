@@ -6,6 +6,14 @@ output: github_document
 
 # Global Lakes and Wetlands Database (GLWD) R client 
 
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "img/"
+)
+```
+
 [![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
 
 ## Installation
@@ -34,7 +42,7 @@ library(glwdr)
 dt <- suppressMessages(glwd_load(level = 1))
 ```
 
-```{r }
+```{r level-1}
 library(maps)
 library(sp)
 
@@ -65,7 +73,7 @@ library(glwdr)
 dt <- suppressMessages(glwd_load(level = 2))
 ```
 
-```{r }
+```{r level-2}
 library(ggplot2)
 library(raster)
 
@@ -92,7 +100,7 @@ library(glwdr)
 dt <- suppressMessages(glwd_load(level = 3))
 ```
 
-```{r }
+```{r level-3}
 map("world")
 plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
 axis(1); axis(2)

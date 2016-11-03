@@ -13,6 +13,8 @@ glwd_load(level)
 glwd_load
 }
 \examples{
+\dontrun{
 dt <- glwd_load(level = 1)
+}
 }
 

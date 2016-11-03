@@ -14,7 +14,9 @@ glwd_get(level)
 glwd_get
 }
 \examples{
+\dontrun{
 glwd_get(level = 1)
+}
 }
 \references{
 Lehner, B., Döll, P.: Development and validation of a global

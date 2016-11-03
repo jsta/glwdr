@@ -6,8 +6,9 @@
 #'
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{
 #' dt <- glwd_load(level = 1)
+#' }
 glwd_load <- function(level){
 
   glwd_load_level_1 <- function(){

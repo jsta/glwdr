@@ -1,6 +1,6 @@
 Package: glwdr
 Title: Global Lakes and Wetlands Database
-Version: 0.0.0.9000
+Version: 0.1
 Authors@R: person("Joseph", "Stachelek", email = "stachel2@msu.edu", role = c("aut", "cre"))
 Description: R client for the Global Lakes and Wetlands Database.
 Depends:

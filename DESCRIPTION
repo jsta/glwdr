@@ -9,8 +9,10 @@ Encoding: UTF-8
 URL: http://github.com/jsta/glwdr
 BugReports: http://github.com/jsta/glwdr/issues
 Imports: rappdirs, rgdal, sp, raster
-Suggests: viridis, ggplot2, maps
+Suggests: testthat,
+    knitr,
+    rmarkdown
 LazyData: true
 RoxygenNote: 5.0.1
-Suggests: testthat
 License: GPL
+VignetteBuilder: knitr

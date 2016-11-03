@@ -5,3 +5,5 @@ glwdr.Rproj
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^README_files$
+^README\.Rmd$
+img

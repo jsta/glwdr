@@ -1,20 +1,24 @@
 ---
-output: github_document
+title: "Global Lakes and Wetlands Database"
+author: "Joseph Stachelek"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Global Lakes and Wetlands Database}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# Global Lakes and Wetlands Database (GLWD) R client 
-
-```{r, echo = FALSE}
+```{r echo=FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
   comment = "#>",
-  fig.path = "vignettes/"
-)
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 10,
+  eval = FALSE)
 ```
-
-[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+`glwdr` is an R interface to the Global Lakes and Wetlands Database. Capabilities are limited to fetching the data from external sources, caching locally with the `rappdirs` package, and loading from this cache on demand. Although plotting and anaylsis is left to the package user, this document demonstrates some possibilities.
 
 ## Installation
 
@@ -55,6 +59,8 @@ plot(dt, add = TRUE, col = "blue")
 axis(1); axis(2)
 ```
 
+![](level-1-1.png)
+
 ```{r echo=FALSE, eval=FALSE}
 dt@data[1:5,]
 ```
@@ -86,6 +92,8 @@ plot(dt[states,], add = TRUE, border = "blue")
 axis(1); axis(2)
 ```
 
+![](level-2-1.png)
+
 ### Level 3
 
 ```{r eval=FALSE}
@@ -94,17 +102,19 @@ glwd_get(level = 3)
 dt <- glwd_load(level = 3)
 ```
 
-```{r echo=FALSE,message=FALSE,results='hide'} 
+```{r echo=FALSE,message=FALSE,results='hide',eval=FALSE} 
 library(glwdr)
 
 dt <- suppressMessages(glwd_load(level = 3))
 ```
 
-```{r level-3}
+```{r level-3, eval=FALSE}
 map("world")
 plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
 axis(1); axis(2)
 ```
+
+![](level-3-1.png)
 
 ## References
 
@@ -112,8 +122,3 @@ Lehner, B., Döll, P.: Development and validation of a global
 database of lakes, reservoirs and wetlands, Journal of Hydrology, Volume
 296, Issues 1–4, 20 August 2004, Pages 1-22,
 http://dx.doi.org/10.1016/j.jhydrol.2004.03.028.
-
-
-
-
-

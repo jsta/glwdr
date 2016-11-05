@@ -11,7 +11,8 @@ glwd_get(level)
 \item{level}{integer data level}
 }
 \description{
-glwd_get
+Retrieve each level of the Global Lakes and Wetlands
+Database.
 }
 \examples{
 \dontrun{

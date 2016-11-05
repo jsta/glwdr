@@ -10,7 +10,8 @@ glwd_load(level)
 \item{level}{integer data level}
 }
 \description{
-glwd_load
+Load each level of the Global Lakes and Wetlands
+ Database into an R object.
 }
 \examples{
 \dontrun{

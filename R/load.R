@@ -1,5 +1,6 @@
 #' glwd_load
-#'
+#' @description Load each level of the Global Lakes and Wetlands
+#'  Database into an R object.
 #' @param level integer data level
 #' @importFrom rgdal readOGR
 #' @importFrom raster raster

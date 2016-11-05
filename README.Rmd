@@ -31,6 +31,29 @@ library(glwdr)
 
 ## Usage
 
+```{r }
+library(maps)
+library(sp)
+library(ggplot2)
+library(raster)
+
+level_1 <- glwd_load(level = 1)
+
+map("world")
+plot(level_1, add = TRUE, col = "blue")
+
+level_2 <- glwd_load(level = 2)
+level_2_key <- data.frame(TYPE = c("Lake", "Reservoir", "River"),
+                col = c("blue", "red", "lightblue"), stringsAsFactors = FALSE)
+level_2 <- merge(level_2, level_2_key, all.x = TRUE, all.y = FALSE)
+plot(level_2, add = TRUE, col = level_2@data$col, border = NA)
+
+level_3 <- glwd_load(level = 3)
+# need to define color ramp more closely matching pub
+plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
+```
+
+
 ### Level 1
 ```{r eval=FALSE} 
 glwd_get(level = 1)

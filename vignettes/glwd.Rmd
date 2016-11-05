@@ -89,6 +89,10 @@ projection(dt) <- projection(states)
 
 map("state")
 plot(dt[states,], add = TRUE, border = "blue")
+key <- data.frame(TYPE = c("Lake", "Reservoir", "River"),
+                  COL = c("blue", "red", "lightblue"))
+dt <- merge(dt, key, all.x = TRUE, all.y = FALSE)
+plot(dt[states,], add = TRUE, col = dt[states, ]$COL)
 axis(1); axis(2)
 ```
 

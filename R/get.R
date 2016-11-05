@@ -1,6 +1,7 @@
 
 #' glwd_get
-#'
+#' @description Retrieve each level of the Global Lakes and Wetlands
+#' Database.
 #' @param level integer data level
 #' @export
 #' @importFrom rappdirs user_data_dir

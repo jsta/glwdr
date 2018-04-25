@@ -18,4 +18,3 @@ Load each level of the Global Lakes and Wetlands
 dt <- glwd_load(level = 1)
 }
 }
-

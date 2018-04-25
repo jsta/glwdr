@@ -25,4 +25,3 @@ database of lakes, reservoirs and wetlands, Journal of Hydrology, Volume
 296, Issues 1–4, 20 August 2004, Pages 1-22,
 http://dx.doi.org/10.1016/j.jhydrol.2004.03.028.
 }
-

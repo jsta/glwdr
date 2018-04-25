@@ -15,13 +15,13 @@ glwd_load <- function(level){
   glwd_load_level_1 <- function(){
     dest_dir <- rappdirs::user_data_dir("glwdr")
     path <- paste0(dest_dir, .Platform$file.sep, "glwd_1.shp")
-    rgdal::readOGR(path, "glwd_1")
+    rgdal::readOGR(path, "glwd_1", stringsAsFactors = FALSE)
   }
 
   glwd_load_level_2 <- function(){
     dest_dir <- rappdirs::user_data_dir("glwdr")
-    path <- paste0(dest_dir, .Platform$file.sep, "glwd_2.shp")
-    rgdal::readOGR(path, "glwd_2")
+    path     <- paste0(dest_dir, .Platform$file.sep, "glwd_2.shp")
+    rgdal::readOGR(path, "glwd_2", stringsAsFactors = FALSE)
   }
 
   glwd_load_level_3 <- function(){

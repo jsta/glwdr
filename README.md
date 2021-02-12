@@ -1,12 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Global Lakes and Wetlands Database (GLWD) R client
-==================================================
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active) [![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/glwdr?color=C9A115)](https://github.com/metacran/cranlogs.app) [![cran version](http://www.r-pkg.org/badges/version/glwdr)](https://cran.r-project.org/package=glwdr)
+# Global Lakes and Wetlands Database (GLWD) R client
 
-Installation
-------------
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[![cran
+version](http://www.r-pkg.org/badges/version/glwdr)](https://cran.r-project.org/package=glwdr)
+
+## Installation
 
 ``` r
 devtools::install_github("jsta/glwdr")
@@ -18,8 +21,7 @@ devtools::install_github("jsta/glwdr")
 library(glwdr)
 ```
 
-Usage
------
+## Usage
 
 ### Level 1
 
@@ -42,7 +44,7 @@ plot(dt, add = TRUE, col = "blue")
 axis(1); axis(2)
 ```
 
-![](vignettes/level-1-1.png)
+![](vignettes/level-1-1.png)<!-- -->
 
 ### Level 2
 
@@ -65,7 +67,7 @@ plot(dt[states,], add = TRUE, border = "blue")
 axis(1); axis(2)
 ```
 
-![](vignettes/level-2-1.png)
+![](vignettes/level-2-1.png)<!-- -->
 
 ### Level 3
 
@@ -81,9 +83,11 @@ plot(dt, breaks = 1:12, col = viridis::viridis(12), add = TRUE)
 axis(1); axis(2)
 ```
 
-![](vignettes/level-3-1.png)
+![](vignettes/level-3-1.png)<!-- -->
 
-References
-----------
+## References
 
-Lehner, B., Döll, P.: Development and validation of a global database of lakes, reservoirs and wetlands, Journal of Hydrology, Volume 296, Issues 1–4, 20 August 2004, Pages 1-22, <http://dx.doi.org/10.1016/j.jhydrol.2004.03.028>.
+Lehner, B., Döll, P.: Development and validation of a global database of
+lakes, reservoirs and wetlands, Journal of Hydrology, Volume 296, Issues
+1–4, 20 August 2004, Pages 1-22,
+<http://dx.doi.org/10.1016/j.jhydrol.2004.03.028>.

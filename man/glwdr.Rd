@@ -3,8 +3,7 @@
 \docType{package}
 \name{glwdr}
 \alias{glwdr}
-\alias{glwdr-package}
 \title{R client for the Global Lakes and Wetlands Database}
 \description{
-R client for the Global Lakes and Wetlands Database
+Serves the Global Lakes and Wetlands Database (GLWD)
 }
